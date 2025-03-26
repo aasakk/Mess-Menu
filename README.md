@@ -70,6 +70,5 @@ This will start the application on `http://localhost:3000/`, where users can int
 This completes the setup and usage of the Mess Menu Management System.
 
 Contributors:
-Aasavari Khire
-Drashi Manoria 
+Aasavari Khire, Drashi Manoria 
 
