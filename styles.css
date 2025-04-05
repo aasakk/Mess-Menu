@@ -8,13 +8,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Form Container */
 .form-container {
     width: 90%; /* Responsive width */
-    max-width: 650px; /* Slightly wider form */
+    max-width: 3000px; /* Slightly wider form */
     background: rgba(255, 255, 255, 0.9); /* Transparency for visibility */
     padding: 25px;
     border-radius: 15px;
