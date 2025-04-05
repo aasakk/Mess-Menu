@@ -41,11 +41,7 @@ const MessRegistrationForm = () => {
       });
 
       const data = await response.json();
-      if (response.ok && data.message === "Registration Successful!") {
-        alert(data.message);
-      } else {
-        alert(data.message || 'Unexpected response from server');
-      }
+      alert(data.message || 'Unexpected response from server');
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred during registration');
@@ -87,7 +83,10 @@ const MessRegistrationForm = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
+      
+    
+      
       <h2>Campus Mess Registration</h2>
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -137,7 +136,7 @@ const MessRegistrationForm = () => {
             <option value="Breakfast">Breakfast</option>
           </select>
 
-          <label>Feasibility:</label>
+          <label>Feasibility (Yes/No):</label>
           <select name="feasibility" value={messDetails.feasibility} onChange={handleMessChange} required>
             <option value="">Select Feasibility</option>
             <option value="Yes">Yes</option>
@@ -148,13 +147,9 @@ const MessRegistrationForm = () => {
         <input type="submit" value="Submit Registration" />
       </form>
 
-      <div style={{ marginTop: '20px' }}>
-        <button onClick={generateReport} style={{ marginRight: '10px', padding: '8px' }}>
-          Generate Report
-        </button>
-        <button onClick={downloadReport} style={{ padding: '8px' }} disabled={!reportFile}>
-          Download Report
-        </button>
+      <div className="report-buttons">
+        <button onClick={generateReport}>Generate Report</button>
+        <button onClick={downloadReport} disabled={!reportFile}>Download Report</button>
       </div>
     </div>
   );
