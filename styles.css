@@ -1,51 +1,88 @@
+/* Background Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Light blue background */
+    background: url('./assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
+/* Form Container */
 .form-container {
-    max-width: 600px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 50px auto;
-}
-
-h2 {
+    width: 90%; /* Responsive width */
+    max-width: 3000px; /* Slightly wider form */
+    background: rgba(255, 255, 255, 0.9); /* Transparency for visibility */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #0077b6; /* Dark blue title */
+    backdrop-filter: blur(10px);
+    margin-top: 50px; /* Keeps the form in the same position as before */
 }
 
+/* Form Heading */
+h2 {
+    color: #0077b6;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Form Group */
 .form-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
+/* Labels */
 label {
     font-weight: bold;
     color: #005f73;
+    display: block;
+    margin-top: 10px;
 }
 
+/* Inputs & Select Fields */
 input, select {
-    width: 100%;
-    padding: 8px;
+    width: calc(100% - 20px); /* Prevents overlapping */
+    padding: 10px;
     margin-top: 5px;
     border: 1px solid #0077b6;
     border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.7);
 }
 
+/* Buttons */
 button {
     background-color: #0077b6;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #005f73;
+}
+
+/* Report Buttons */
+.report-buttons {
+    display: flex;
+    gap: 10px; /* Prevents buttons from touching each other */
+    justify-content: space-between;
+}
+
+.report-buttons button {
+    width: 48%;
 }
